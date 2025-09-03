@@ -19,3 +19,9 @@ Route::get('/', function () {
 });
 
 Route::get('/padaria', [Principalcontroller::class, 'bakery'])->name('bakery');
+
+Route::get('/sobre', function (){return view('sobre');})->name('sobre');
+
+Route::get('/contato', function (){return view('contato');})->name('contato');
+
+Route::post('/contato',[Principalcontroller::class, 'enviarContato']);
