@@ -18,10 +18,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/padaria', [Principalcontroller::class, 'bakery'])->name('bakery');
+Route::get('/bakery', [Principalcontroller::class, 'bakery']);
 
-Route::get('/sobre', function (){return view('sobre');})->name('sobre');
+Route::get('/sobre', [Principalcontroller::class, 'sobre']);
 
-Route::get('/contato', function (){return view('contato');})->name('contato');
-
-Route::post('/contato',[Principalcontroller::class, 'enviarContato']);
+Route::get('/contato',[Principalcontroller::class, 'contato']);

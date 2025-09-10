@@ -10,13 +10,11 @@ class Principalcontroller extends Controller
         return view('bakery');
     }
 
-    public function sobrenos()
-    {
-        return view('sobrenos');        
+    public function sobre(){
+        return view('sobre');        
     }
 
-    public function contato('contato')
-    {
+    public function contato(){
         return view('contato');
     }
 
